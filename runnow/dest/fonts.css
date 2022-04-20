@@ -1,0 +1,106 @@
+@font-face {
+	font-family: "clr-md";
+	src: url("../fonts/ClashGrotesk-Medium.woff2") format("woff2"),
+		url("../fonts/ClashGrotesk-Medium.woff") format("woff"),
+		url("../fonts/ClashGrotesk-Medium.ttf") format("truetype");
+	font-weight: 500;
+	font-display: swap;
+	font-style: normal;
+}
+@font-face {
+	font-family: "frr";
+	src: url("../fonts/Furore.woff2") format("woff2"),
+		url("../fonts/Furore.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: fallback;
+}
+
+@font-face {
+	font-family: "lcgr";
+	src: url("../fonts/LucidaGrande.woff2") format("woff2"),
+		url("../fonts/LucidaGrande.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: fallback;
+}
+
+@font-face {
+	font-family: "madr";
+	src: url("../fonts/MadsonRegular.woff2") format("woff2"),
+		url("../fonts/MadsonRegular.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: fallback;
+}
+
+@font-face {
+	font-family: "madsm";
+	src: url("../fonts/MadsonSemibold.woff2") format("woff2"),
+		url("../fonts/MadsonSemibold.woff") format("woff");
+	font-weight: 600;
+	font-style: normal;
+	font-display: fallback;
+}
+
+@font-face {
+	font-family: "mdb";
+	src: url("../fonts/MadsonBold.woff2") format("woff2"),
+		url("../fonts/MadsonBold.woff") format("woff");
+	font-weight: bold;
+	font-style: normal;
+	font-display: fallback;
+}
+
+@font-face {
+	font-family: "dfm";
+	src: url("../fonts/SFProDisplay-Medium.woff2") format("woff2"),
+		url("../fonts/SFProDisplay-Medium.woff") format("woff");
+	font-weight: 500;
+	font-style: normal;
+	font-display: fallback;
+}
+
+@font-face {
+	font-family: "sfr";
+	src: url("../fonts/SFProDisplay-Regular.woff2") format("woff2"),
+		url("../fonts/SFProDisplay-Regular.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: fallback;
+}
+
+@font-face {
+	font-family: "sfb";
+	src: url("../fonts/SFProDisplay-Bold.woff2") format("woff2"),
+		url("../fonts/SFProDisplay-Bold.woff") format("woff");
+	font-weight: bold;
+	font-style: normal;
+	font-display: fallback;
+}
+
+@font-face {
+	font-family: "sfsm";
+	src: url("../fonts/SFProDisplay-Semibold.woff2") format("woff2"),
+		url("../fonts/SFProDisplay-Semibold.woff") format("woff");
+	font-weight: 600;
+	font-style: normal;
+	font-display: fallback;
+}
+
+@font-face {
+	font-family: "sft";
+	src: url("../fonts/SFProDisplay-Thin.woff2") format("woff2"),
+		url("../fonts/SFProDisplay-Thin.woff") format("woff");
+	font-weight: 100;
+	font-style: normal;
+	font-display: fallback;
+}
+@font-face {
+	font-family: "rdhr";
+	src: url("../fonts/Rajdhani-Regular.woff2") format("woff2"),
+		url("../fonts/Rajdhani-Regular.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: fallback;
+}
