@@ -1,3 +1,11 @@
+function InitNFTItems(){
+	$('#nft-items-menu').find('.active').click();
+	//$('#nft-items-container').find('.flickity-enabled').hide();
+}
+
+function ShowAllNFTItems(){
+	$('#nft-items-container').find('.slider').show();
+}
 ///////////////////////// SCROLL ///////////////////////////////
 $(document).ready(function () {
 	let header = $(".header"),
@@ -69,6 +77,7 @@ $(document).ready(function () {
 	setStorageDevice();
 
 	function reloadOnResize() {
+		ShowAllNFTItems();
 		let windowsize = $(window).width(),
 			divice = localStorage.getItem("device");
 		if (windowsize <= screen.mobile && divice != "mobile") {
@@ -269,11 +278,16 @@ $(document).ready(function () {
 		const $carousel = $(".about-section .about-slider .slider").flickity({
 			cellAlign: "center",
 			contain: true,
+			freeScroll: false,
 			wrapAround: true,
 			dragThreshold: 0,
 			pageDots: false,
 			prevNextButtons: false,
-			lazyLoad: 3
+			lazyLoad: 3,
+			on: {
+			    ready: function() {
+			      InitNFTItems();
+		    }}
 		});
 
 		$carousel.on("dragStart.flickity", function () {
@@ -304,7 +318,7 @@ $(document).ready(function () {
 			contain: "true",
 			freeScroll: true,
 			pageDots: false,
-			prevNextButtons: false,
+			prevNextButtons: true,
 		});
 		$(".roadmap").on("mouseenter", function () {
 			cursor.addClass("--show");
@@ -446,3 +460,11 @@ $(document).ready(function () {
 	}
 	init();
 });
+
+function ShowItems($target, $itemID){
+	$('#nft-items-menu').children().removeClass('active');
+	$($target).addClass('active');
+
+	$('#nft-items-container').find('.flickity-enabled').hide();
+	$('#' + $itemID).show();
+}

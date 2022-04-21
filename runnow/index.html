@@ -22,6 +22,8 @@
 	<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="dest/style.min.css?v=1" />
 	<link rel="stylesheet" href="dest/custom.css?v=1" />
+	<!--link rel="stylesheet" href="dest/flickity.css" /-->
+	flickity
 	<style>
 		@font-face {
 		    font-family: 'Heavy Copper Condensed Italic';
@@ -374,46 +376,214 @@
 					</div>
 				</div>
 			</div>
-			<div class="about-slider use-custom-cursor">
+			<div class="about-slider use-custom-cursor" id="nft-items-container">
 				<div class="container">
 					<img src="img/nft-items-bg.png" alt="" class="slider-background">
-					<div class="v-menu">
-						<a href="" class="v-menu-item active">
+					<div class="v-menu" id="nft-items-menu">
+						<a class="v-menu-item active" onclick="ShowItems(this, 'nft-items-character');">
 							<img src="img/character-icon.svg">
 						</a>
-						<a href="" class="v-menu-item">
+						<a class="v-menu-item" onclick="ShowItems(this, 'nft-items-shoes');">
 							<img src="img/shoes-icon.svg">
 						</a>
-						<a href="" class="v-menu-item">
-							<img src="img/bycicle-icon.svg">
+						<a class="v-menu-item" onclick="ShowItems(this, 'nft-items-bicycle');">
+							<img src="img/bicycle-icon.svg">
 						</a>
-						<a href="" class="v-menu-item">							
+						<a class="v-menu-item" onclick="ShowItems(this, 'nft-items-swimwear');">
 							<img src="img/swimwear-icon.svg">							
 						</a>
-						<a href="" class="v-menu-item">
+						<a class="v-menu-item" onclick="ShowItems(this, 'nft-items-gem');">
+							<img src="img/gem-icon.svg">
+						</a>
+						<a class="v-menu-item" onclick="ShowItems(this, 'nft-items-another');">
 							<img src="img/gem-icon.svg">
 						</a>
 					</div>
 				</div>
-				<div class="slider">
+				<div class="slider" id="nft-items-character">
 					<div class="slider-item">
 						<div class="slider-image"><img width="100%" height="100%"
-								data-flickity-lazyload="img/nft-items-character.png" alt="" />
+								data-flickity-lazyload="img/nft-items/item-char-1.png" alt="" />
 						</div>
 					</div>
 					<div class="slider-item">
 						<div class="slider-image"><img width="100%" height="100%"
-								data-flickity-lazyload="img/nft-items-swimwears.png" alt="" />
+								data-flickity-lazyload="img/nft-items/item-char-2.png" alt="" />
 						</div>
 					</div>
 					<div class="slider-item">
 						<div class="slider-image"><img width="100%" height="100%"
-								data-flickity-lazyload="img/nft-items-shoes.png" alt="" />
+								data-flickity-lazyload="img/nft-items/item-char-3.png" alt="" />
 						</div>
 					</div>
 					<div class="slider-item">
 						<div class="slider-image"><img width="100%" height="100%"
-								data-flickity-lazyload="img/nft-items-bycicle.png" alt="" />
+								data-flickity-lazyload="img/nft-items/item-char-1.png" alt="" />
+						</div>
+					</div>
+					<div class="slider-item">
+						<div class="slider-image"><img width="100%" height="100%"
+								data-flickity-lazyload="img/nft-items/item-char-2.png" alt="" />
+						</div>
+					</div>
+					<div class="slider-item">
+						<div class="slider-image"><img width="100%" height="100%"
+								data-flickity-lazyload="img/nft-items/item-char-3.png" alt="" />
+						</div>
+					</div>
+				</div>
+				<div class="slider" id="nft-items-shoes">
+					<div class="slider-item">
+						<div class="slider-image"><img width="100%" height="100%"
+								data-flickity-lazyload="img/nft-items/NFT Shoes-01.png" alt="" />
+						</div>
+					</div>
+					<div class="slider-item">
+						<div class="slider-image"><img width="100%" height="100%"
+								data-flickity-lazyload="img/nft-items/NFT Shoes-05.png" alt="" />
+						</div>
+					</div>
+					<div class="slider-item">
+						<div class="slider-image"><img width="100%" height="100%"
+								data-flickity-lazyload="img/nft-items/NFT Shoes-03.png" alt="" />
+						</div>
+					</div>
+					<div class="slider-item">
+						<div class="slider-image"><img width="100%" height="100%"
+								data-flickity-lazyload="img/nft-items/NFT Shoes-01.png" alt="" />
+						</div>
+					</div>
+					<div class="slider-item">
+						<div class="slider-image"><img width="100%" height="100%"
+								data-flickity-lazyload="img/nft-items/NFT Shoes-05.png" alt="" />
+						</div>
+					</div>
+					<div class="slider-item">
+						<div class="slider-image"><img width="100%" height="100%"
+								data-flickity-lazyload="img/nft-items/NFT Shoes-03.png" alt="" />
+						</div>
+					</div>
+				</div>
+				<div class="slider" id="nft-items-bicycle">
+					<div class="slider-item">
+						<div class="slider-image"><img width="100%" height="100%"
+								data-flickity-lazyload="img/nft-items/Bike 2.png" alt="" />
+						</div>
+					</div>
+					<div class="slider-item">
+						<div class="slider-image"><img width="100%" height="100%"
+								data-flickity-lazyload="img/nft-items/Bike 1.png" alt="" />
+						</div>
+					</div>
+					<div class="slider-item">
+						<div class="slider-image"><img width="100%" height="100%"
+								data-flickity-lazyload="img/nft-items/Bike 4.png" alt="" />
+						</div>
+					</div>
+					<div class="slider-item">
+						<div class="slider-image"><img width="100%" height="100%"
+								data-flickity-lazyload="img/nft-items/Bike 2.png" alt="" />
+						</div>
+					</div>
+					<div class="slider-item">
+						<div class="slider-image"><img width="100%" height="100%"
+								data-flickity-lazyload="img/nft-items/Bike 1.png" alt="" />
+						</div>
+					</div>
+					<div class="slider-item">
+						<div class="slider-image"><img width="100%" height="100%"
+								data-flickity-lazyload="img/nft-items/Bike 4.png" alt="" />
+						</div>
+					</div>
+				</div>
+				<div class="slider" id="nft-items-swimwear">
+					<div class="slider-item">
+						<div class="slider-image"><img width="100%" height="100%"
+								data-flickity-lazyload="img/nft-items/Swimming Suit-03.png" alt="" />
+						</div>
+					</div>
+					<div class="slider-item">
+						<div class="slider-image"><img width="100%" height="100%"
+								data-flickity-lazyload="img/nft-items/Swimming Suit-01.png" alt="" />
+						</div>
+					</div>
+					<div class="slider-item">
+						<div class="slider-image"><img width="100%" height="100%"
+								data-flickity-lazyload="img/nft-items/Swimming Suit-05.png" alt="" />
+						</div>
+					</div>
+					<div class="slider-item">
+						<div class="slider-image"><img width="100%" height="100%"
+								data-flickity-lazyload="img/nft-items/Swimming Suit-02.png" alt="" />
+						</div>
+					</div>
+					<div class="slider-item">
+						<div class="slider-image"><img width="100%" height="100%"
+								data-flickity-lazyload="img/nft-items/Swimming Suit-04.png" alt="" />
+						</div>
+					</div>
+				</div>
+				<div class="slider" id="nft-items-gem">
+					<div class="slider-item">
+						<div class="slider-image"><img width="100%" height="100%"
+								data-flickity-lazyload="img/nft-items/item-char-1.png" alt="" />
+						</div>
+					</div>
+					<div class="slider-item">
+						<div class="slider-image"><img width="100%" height="100%"
+								data-flickity-lazyload="img/nft-items/item-char-2.png" alt="" />
+						</div>
+					</div>
+					<div class="slider-item">
+						<div class="slider-image"><img width="100%" height="100%"
+								data-flickity-lazyload="img/nft-items/item-char-3.png" alt="" />
+						</div>
+					</div>
+					<div class="slider-item">
+						<div class="slider-image"><img width="100%" height="100%"
+								data-flickity-lazyload="img/nft-items/item-char-1.png" alt="" />
+						</div>
+					</div>
+					<div class="slider-item">
+						<div class="slider-image"><img width="100%" height="100%"
+								data-flickity-lazyload="img/nft-items/item-char-2.png" alt="" />
+						</div>
+					</div>
+					<div class="slider-item">
+						<div class="slider-image"><img width="100%" height="100%"
+								data-flickity-lazyload="img/nft-items/item-char-3.png" alt="" />
+						</div>
+					</div>
+				</div>
+				<div class="slider" id="nft-items-another">
+					<div class="slider-item">
+						<div class="slider-image"><img width="100%" height="100%"
+								data-flickity-lazyload="img/nft-items/item-char-1.png" alt="" />
+						</div>
+					</div>
+					<div class="slider-item">
+						<div class="slider-image"><img width="100%" height="100%"
+								data-flickity-lazyload="img/nft-items/item-char-2.png" alt="" />
+						</div>
+					</div>
+					<div class="slider-item">
+						<div class="slider-image"><img width="100%" height="100%"
+								data-flickity-lazyload="img/nft-items/item-char-3.png" alt="" />
+						</div>
+					</div>
+					<div class="slider-item">
+						<div class="slider-image"><img width="100%" height="100%"
+								data-flickity-lazyload="img/nft-items/item-char-1.png" alt="" />
+						</div>
+					</div>
+					<div class="slider-item">
+						<div class="slider-image"><img width="100%" height="100%"
+								data-flickity-lazyload="img/nft-items/item-char-2.png" alt="" />
+						</div>
+					</div>
+					<div class="slider-item">
+						<div class="slider-image"><img width="100%" height="100%"
+								data-flickity-lazyload="img/nft-items/item-char-3.png" alt="" />
 						</div>
 					</div>
 				</div>

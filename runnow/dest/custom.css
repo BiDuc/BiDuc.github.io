@@ -95,7 +95,7 @@ body .mainwrapper{
 
 .home .about-section .section-content .headline .heading img {
     margin: auto;
-    padding: var(--gap) 0 30px 0;
+    padding: var(--gap) 0 0 0;
 }
 
 .home .about-section .section-content .headline .heading.gradient-line {
@@ -111,7 +111,7 @@ body .mainwrapper{
     background-clip: text;
     text-fill-color: transparent;
     line-height: normal;
-    margin: 0 auto 50px auto;
+    margin: 0 auto;
 }
 
 .home .about-section .section-content .subtitle {
@@ -205,7 +205,8 @@ body .mainwrapper{
 .home .about-section .about-slider .container .v-menu {
 	position: absolute;
 	top: 50%;
-	margin-top: -186px;
+	margin-top: -227px;
+	z-index: 1000;
 }
 
 .home .about-section .about-slider .container .v-menu .v-menu-item {
@@ -213,6 +214,11 @@ body .mainwrapper{
 	padding-bottom: 13px;
 	margin: auto;
 	display: table;
+	opacity: 0.5;
+}
+
+.home .about-section .about-slider .container .v-menu .active {	
+	opacity: 1;
 }
 
 .home .road-map .type-card .item-card {
@@ -445,4 +451,71 @@ body .mainwrapper{
 	text-align: center;
 
 	color: #FFFFFF;
+}
+
+.home .about-section .slider .slider-item{
+	width: calc(var(--height-img) * 3/4);
+}
+
+.home .about-section .slider {
+	margin: auto;	
+	width: calc(var(--height-img) * 10/4);
+    --height-img: 150px;
+    --slide-gap: 100px;
+    --width-slide: calc(100vw - var(--slide-gap, 100px));
+}
+
+@media screen and (min-width: 576px){
+	.home .about-section .slider {
+	    --height-img: 200px;
+	    --slide-gap: 166px;
+	}
+
+	.home .about-section .about-slider {
+		height: 345px;
+	}
+}
+
+@media screen and (min-width: 768px){
+	.home .about-section .slider {
+	    --height-img: 300px;
+	    --width-slide: 52%;
+	}
+
+	.home .about-section .slider-image img{
+		max-height: 100%;
+	}
+
+	.home .about-section .about-slider {
+		height: 517px;
+	}
+}
+
+@media screen and (min-width: 992px){
+	.home .about-section .slider {
+	    --width-slide: 45%;
+	    --h2-fs: 10rem;
+	}
+}
+
+@media screen and (min-width: 1440px){
+	.home .about-section .slider {
+	    --height-img: 366px;
+	}	
+
+	.home .about-section .about-slider {
+		height: 632px;
+	}
+}
+
+@media (min-width: 1600px){
+	.home .about-section .slider {
+	    --width-slide: 500px;
+	    --height-img: 400px;
+	    --slide-gap: 200px;
+	}
+
+	.home .about-section .about-slider {
+		height: 690px;
+	}
 }
