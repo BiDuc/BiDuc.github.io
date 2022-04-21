@@ -55,6 +55,18 @@ body .mainwrapper{
 	color: #C4C4C4;
 }
 
+.home .hero-section__content .content {
+	font-family: 'Inter', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 32px;
+	/* or 178% */
+
+
+	color: #C4C4C4;
+}
+
 .home .hero-section__content .headline{
 	font-family: 'Inter', sans-serif;
 	font-style: normal;
@@ -83,7 +95,7 @@ body .mainwrapper{
 	font-family: 'Inter', sans-serif;
 	font-style: normal;
 	font-weight: 600;
-	font-size: 20px;
+	font-size: 24px;
 	line-height: 28px;
 	background: linear-gradient(270.17deg, #00EFA9 135.3%, #3F56F0 1258.28%);
 	-webkit-background-clip: text;
@@ -96,6 +108,11 @@ body .mainwrapper{
 .home .about-section .section-content .headline .heading img {
     margin: auto;
     padding: var(--gap) 0 0 0;
+}
+
+
+.home .about-section .section-content .headline .heading .img-underline {
+	padding-bottom: 20px;	
 }
 
 .home .about-section .section-content .headline .heading.gradient-line {
@@ -127,6 +144,8 @@ body .mainwrapper{
 	/* Base/Grey 0 */
 
 	color: #FFFFFF;
+
+	padding-top: 60px;
 }
 
 .home .about-section .section-content .content{
@@ -235,7 +254,7 @@ body .mainwrapper{
 	font-family: 'Inter', sans-serif;
 	font-style: normal;
 	font-weight: 600;
-	font-size: 20px;
+	font-size: 24px;
 	line-height: 28px;
 	background: linear-gradient(270.17deg, #00EFA9 135.3%, #3F56F0 1258.28%);
 	-webkit-background-clip: text;
@@ -274,7 +293,7 @@ body .mainwrapper{
 	font-family: 'Inter', sans-serif;
 	font-style: normal;
 	font-weight: 700;
-	font-size: 24px;
+	font-size: 20px;
 	line-height: 117.7%;
 	color: #FFFFFF;
 }
@@ -282,6 +301,7 @@ body .mainwrapper{
 .home .road-map .roadmap-content img{
 	margin: auto;
     padding: 20px 0;
+    height: 160px;
 }
 
 .home .road-map .roadmap-content ul{
@@ -294,7 +314,7 @@ body .mainwrapper{
 	font-family: 'Inter', sans-serif;
 	font-style: normal;
 	font-weight: 600;
-	font-size: 20px;
+	font-size: 24px;
 	line-height: 28px;
 	background: linear-gradient(270.17deg, #00EFA9 135.3%, #3F56F0 1258.28%);
 	-webkit-background-clip: text;
@@ -312,7 +332,7 @@ body .mainwrapper{
 	font-family: 'Inter', sans-serif;
 	font-style: normal;
 	font-weight: 600;
-	font-size: 20px;
+	font-size: 24px;
 	line-height: 28px;
 	background: linear-gradient(270.17deg, #00EFA9 135.3%, #3F56F0 1258.28%);
 	-webkit-background-clip: text;
@@ -339,18 +359,30 @@ body .mainwrapper{
 	margin: auto;
 }
 
+.home .team-section .team__list {
+	column-gap: 0;
+	row-gap: 21px;
+}
+
+.home .team-section .team__list .item{
+	padding: 16px;
+}
+
 .home .team-section .team__list .item__info {
 	font-family: 'Inter', sans-serif;
 	font-style: normal;
 	font-weight: 500;
 	font-size: 21px;
 	line-height: 32px;
+	text-align: left;
 	/* identical to box height */
 
 
 	/* Text/Inverse */
 
 	color: #FFFFFF;
+
+	padding-bottom: 0; 
 }
 
 .home .team-section .team__list .item__info .pos {
@@ -359,22 +391,135 @@ body .mainwrapper{
 	font-weight: 300;
 	font-size: 16px;
 	line-height: 24px;
+	text-align: left;
 	/* identical to box height */
 
 
 	/* hide */
 
 	color: #777E90;
+	padding-bottom: 92px;
 }
 
-.home .advisors-section .team-members{
+.home .team-section .team__list .item:hover .item__info .pos .bodytext{
+	opacity: 1;
+}
+
+.home .team-section .team__list .item__info a>img{
+	margin: auto;
+	padding-top: 64px;
+}
+
+.team-members .member{
+	width: calc(100% / var(--columns-count) - 34px);
+	margin-left: 17px;
+	margin-right: 17px;
+}
+
+
+.home .advisors-section .team-members {
 	--columns-count: 2;
 	width: var(--container-width);
     margin: auto;
 }
 
+.team-members .member__img{
+	padding-bottom: 0;
+}
+
+.team-members .member__img img{
+    object-fit: cover;
+}
+
+.home .advisors-section .team-members .member{
+	background: #2E2B32;
+	border-radius: 24px;
+	padding-bottom: 0;
+}
+
+.home .advisors-section .team-members .member:nth-child(1){
+	margin-top: 0;
+}
+
+.home .advisors-section .team-members .member:nth-child(2){
+	margin-top: 150px;
+}
+
+.home .advisors-section .team-members .member:nth-child(3){
+	margin-top: -150px;
+}
+
+.home .advisors-section .team-members .member:nth-child(4){
+	margin-top: 0;
+}
+
+
+.team-members .member__info2 {
+    margin: 27px 23px;
+    flex: 1;
+    text-align: right;
+
+}
+
+.team-members .member__info2 .info-name{
+	font-family: 'Inter', sans-serif;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 143.7%;
+	/* or 34px */
+
+	text-align: right;
+	text-transform: uppercase;
+
+	/* Text/Inverse */
+
+	color: #FFFFFF;
+}
+
+.team-members .member__info2 .info-role{
+	font-family: 'Inter', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 143.7%;
+	/* identical to box height, or 23px */
+
+	text-transform: uppercase;
+
+	/* Text/Inverse */
+
+	color: #FFFFFF;
+	text-align: right;
+}
+
+.team-members .member__info2 .description{
+	font-family: 'Inter', sans-serif;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 158.7%;
+	/* or 22px */
+
+	text-align: justify;
+	letter-spacing: -0.03em;
+
+	/* hide */
+	float: right;
+	color: #777E90;
+	padding-top: 11px;
+	width: 90%;
+}
+
+
+
+
+.team-members .member__info2 .text-content{
+
+}
+
 .home .advisors-section .main-heading.gradient-line {
-	margin-bottom: 30px;
+	margin-bottom: 86px;
 }
 
 .home .partners-section .partners-list.--coming-soon .partner {
@@ -453,6 +598,15 @@ body .mainwrapper{
 	color: #FFFFFF;
 }
 
+header .header .menu .sub-menu .menu-item .menu-link {
+    padding-top: 10px;
+    font-size: 13px;
+}
+
+header .header .menu-item .sub-menu {
+    margin-left: -25px;
+}
+
 .home .about-section .slider .slider-item{
 	width: calc(var(--height-img) * 3/4);
 }
@@ -517,5 +671,17 @@ body .mainwrapper{
 
 	.home .about-section .about-slider {
 		height: 690px;
+	}
+}
+
+@media screen and (max-width: 991px){
+	.home .advisors-section .team-members{
+		--columns-count: 1;
+	}
+	.home .advisors-section .team-members .member:nth-child(1),
+	.home .advisors-section .team-members .member:nth-child(2),
+	.home .advisors-section .team-members .member:nth-child(3),
+	.home .advisors-section .team-members .member:nth-child(4){
+		margin-top: 39px;
 	}
 }

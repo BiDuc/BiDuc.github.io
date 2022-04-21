@@ -5,6 +5,10 @@ function InitNFTItems(){
 
 function ShowAllNFTItems(){
 	$('#nft-items-container').find('.slider').show();
+	$('#nft-items-container').find('.slider').css("opacity", "0");
+	$('#nft-items-container').find('.active').css("opacity", "1");
+
+	setTimeout(InitNFTItems, 500);
 }
 ///////////////////////// SCROLL ///////////////////////////////
 $(document).ready(function () {
@@ -285,9 +289,12 @@ $(document).ready(function () {
 			prevNextButtons: false,
 			lazyLoad: 3,
 			on: {
-			    ready: function() {
-			      InitNFTItems();
-		    }}
+			    ready: function() {			    	
+			      	InitNFTItems();
+		    	},
+			    change: function( index ) {
+			    }
+			}
 		});
 
 		$carousel.on("dragStart.flickity", function () {
@@ -464,6 +471,10 @@ $(document).ready(function () {
 function ShowItems($target, $itemID){
 	$('#nft-items-menu').children().removeClass('active');
 	$($target).addClass('active');
+
+	$('#nft-items-container').find('.slider').removeClass('active');
+	$('#' + $itemID).addClass('active');
+	$('#' + $itemID).css('opacity', '1');
 
 	$('#nft-items-container').find('.flickity-enabled').hide();
 	$('#' + $itemID).show();
