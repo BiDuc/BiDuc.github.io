@@ -796,6 +796,32 @@ header .header .menu-item .sub-menu {
 	.time-countdown li span{
 		font-size: 44px;
 	    width: 100px;
-	    padding: 20px 0
+	    padding: 20px 0;
+	}
+}
+
+@media screen and (max-width: 490px){
+	.home .hero-section__content .content h1{
+		font-size: 22px;
+	}
+
+	.home .hero-section__content .content p{
+		font-size: 8px;
+	}
+	.time-countdown {
+		margin-top: 40px;
+	}
+
+	.time-countdown li {
+		padding: 0.1em;
+		font-size: 10px;
+	}
+
+	.time-countdown li span{
+		font-size: 15px;
+	    width: 50px;
+	    padding: 0;
+	    margin-bottom: 0;
+	    line-height: 70px;
 	}
 }
