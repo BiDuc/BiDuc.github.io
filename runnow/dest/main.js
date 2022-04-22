@@ -6,7 +6,7 @@ function InitNFTItems(){
 function ShowAllNFTItems(){
 	$('#nft-items-container').find('.slider').show();
 	$('#nft-items-container').find('.slider').css("opacity", "0");
-	$('#nft-items-container').find('.active').css("opacity", "1");
+	$('#nft-items-container').find('.active-slider').css("opacity", "1");
 
 	setTimeout(InitNFTItems, 500);
 }
@@ -472,10 +472,11 @@ function ShowItems($target, $itemID){
 	$('#nft-items-menu').children().removeClass('active');
 	$($target).addClass('active');
 
-	$('#nft-items-container').find('.slider').removeClass('active');
-	$('#' + $itemID).addClass('active');
+	$('#nft-items-container').find('.slider').removeClass('active-slider');
+	$('#' + $itemID).addClass('active-slider');
 	$('#' + $itemID).css('opacity', '1');
 
 	$('#nft-items-container').find('.flickity-enabled').hide();
 	$('#' + $itemID).show();
+	$('#' + $itemID).insertAfter($('#nft-items-menu').parent());
 }
