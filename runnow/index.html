@@ -22,132 +22,19 @@
 	<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="dest/style.min.css?v=1" />
 	<link rel="stylesheet" href="dest/custom.css?v=1" />
-	<!--link rel="stylesheet" href="dest/flickity.css" /-->
-	<style>
-		/*@font-face {
-		    font-family: 'Heavy Copper Condensed Italic';
-		    src: url('fonts/HeavyCopperCondensedItalic.woff2') format('woff2'),
-		        url('fonts/HeavyCopperCondensedItalic.woff') format('woff');
-		    font-weight: normal;
-		    font-style: italic;
-		    font-display: swap;
-		}
-
-		@font-face {
-			font-family: "clr-md";
-			src: url("fonts/ClashGrotesk-Medium.woff2") format("woff2"),
-				url("fonts/ClashGrotesk-Medium.woff") format("woff");
-			font-weight: 500;
-			font-display: swap;
-			font-style: normal;
-		}
-
-		@font-face {
-			font-family: "frr";
-			src: url("fonts/Furore.woff2") format("woff2"),
-				url("fonts/Furore.woff") format("woff");
-			font-weight: normal;
-			font-style: normal;
-			font-display: fallback;
-		}
-
-		@font-face {
-			font-family: "lcgr";
-			src: url("fonts/LucidaGrande.woff2") format("woff2"),
-				url("fonts/LucidaGrande.woff") format("woff");
-			font-weight: normal;
-			font-style: normal;
-			font-display: fallback;
-		}
-
-		@font-face {
-			font-family: "madr";
-			src: url("fonts/MadsonRegular.woff2") format("woff2"),
-				url("fonts/MadsonRegular.woff") format("woff");
-			font-weight: normal;
-			font-style: normal;
-			font-display: fallback;
-		}
-
-		@font-face {
-			font-family: "madsm";
-			src: url("fonts/MadsonSemibold.woff2") format("woff2"),
-				url("fonts/MadsonSemibold.woff") format("woff");
-			font-weight: 600;
-			font-style: normal;
-			font-display: fallback;
-		}
-
-		@font-face {
-			font-family: "mdb";
-			src: url("fonts/MadsonBold.woff2") format("woff2"),
-				url("fonts/MadsonBold.woff") format("woff");
-			font-weight: bold;
-			font-style: normal;
-			font-display: fallback;
-		}
-
-		@font-face {
-			font-family: "dfm";
-			src: url("fonts/SFProDisplay-Medium.woff2") format("woff2"),
-				url("fonts/SFProDisplay-Medium.woff") format("woff");
-			font-weight: 500;
-			font-style: normal;
-			font-display: fallback;
-		}
-
-		@font-face {
-			font-family: "sfr";
-			src: url("fonts/SFProDisplay-Regular.woff2") format("woff2"),
-				url("fonts/SFProDisplay-Regular.woff") format("woff");
-			font-weight: normal;
-			font-style: normal;
-			font-display: fallback;
-		}
-
-		@font-face {
-			font-family: "sfb";
-			src: url("fonts/SFProDisplay-Bold.woff2") format("woff2"),
-				url("fonts/SFProDisplay-Bold.woff") format("woff");
-			font-weight: bold;
-			font-style: normal;
-			font-display: fallback;
-		}
-
-		@font-face {
-			font-family: "sfsm";
-			src: url("fonts/SFProDisplay-Semibold.woff2") format("woff2"),
-				url("fonts/SFProDisplay-Semibold.woff") format("woff");
-			font-weight: 600;
-			font-style: normal;
-			font-display: fallback;
-		}
-
-		@font-face {
-			font-family: "sft";
-			src: url("fonts/SFProDisplay-Thin.woff2") format("woff2"),
-				url("fonts/SFProDisplay-Thin.woff") format("woff");
-			font-weight: 100;
-			font-style: normal;
-			font-display: fallback;
-		}
-
-		@font-face {
-			font-family: "rdhr";
-			src: url("fonts/Rajdhani-Regular.woff2") format("woff2"),
-				url("fonts/Rajdhani-Regular.woff") format("woff");
-			font-weight: normal;
-			font-style: normal;
-			font-display: fallback;
-		}*/
-	</style>
+	<link rel="stylesheet" href="dest/flickity.css" />
 </head>
 
 <body class="home">
 	<div class="loading"></div>
 	<div class="cursor"></div>
 	<header id="header">
-		<div class="container">
+		<div class="container">			
+			<a class="McButton" data="hamburger-menu">
+				<b></b>
+				<b></b>
+				<b></b>
+			</a>
 			<div class="logo-wrap">
 				<a class="logo">
 					<img src="img/logo.svg">
@@ -172,7 +59,6 @@
 					<div class="header-cta">
 						<span>Join us</span>
 						<a href="https://discord.gg/AGytWeMecD" class="cta">
-							<!-- <img width="100%" height="100%" src="img/social-1.svg" alt="" class="svg" /> -->
 							<svg width="22" height="24" viewBox="0 0 22 24" fill="none"
 								xmlns="http://www.w3.org/2000/svg">
 								<path
@@ -254,11 +140,6 @@
 					</ul>
 				</div>
 			</div>
-			<a class="McButton" data="hamburger-menu">
-				<b></b>
-				<b></b>
-				<b></b>
-			</a>
 		</div>
 	</header>
 	<nav class="nav gradient-background" style="--background-img: url('/img/gradient.png')">
@@ -297,6 +178,10 @@
 						<button class="play-btn"></button>
 						<span class="headline">play game now</span>
 					</a>
+				</div>
+				<div class="hero-section_buttons">						
+					<a class="btn"><img src="img/android-icon.svg">Android (APK)</a>
+					<a class="btn"><img src="img/ios-icon.svg">iOS (TestFlight)</a>
 				</div>
 			</div>
 		</section>
@@ -370,8 +255,8 @@
 			<div class="container">
 				<div class="section-content">
 					<div class="headline">
-						<span>NFT ITEMS</span>
-						<h1 class="heading"><img src="img/nft-items-titles.png"></h1>
+						<!--span>NFT ITEMS</span-->
+						<h1 class="heading"><img class="img-mb" src="img/nft-items-titles-mb.png"><img class="img-pc" src="img/nft-items-titles.png"></h1>
 					</div>
 				</div>
 			</div>
@@ -588,24 +473,150 @@
 				</div>
 			</div>
 		</section>
-		<section data-scroll data-scroll-repeat data-scroll-offset="50%" class="pd-top road-map">
+		<section data-scroll data-scroll-repeat data-scroll-offset="50%" class="pd-top asset-card">
 			<div class="slide-container">
-				<div class="inner roadmap use-custom-cursor">
+				<div class="inner card-container use-custom-cursor">
 					<div class="slider">
-						<div class="roadmap-item type-card">
-							<img class="item-card" src="img/card_1.svg">
+						<div class="card-item type-card">							
+							<div class="card card-content">
+							  	<div class="card-line1">
+							  		<span class="card-dot" style="background-color: #F9AA4B;"></span>
+							  		<div class="card-percent"><img src="img/arrow-up.svg">0.67%</div>
+							  	</div>
+							  	<div class="card-line2">DISTANCE RUN</div>
+							  	<div class="card-line3">
+							  		<div class="card-amount">4,345,666,831.01</div>
+							  		<div class="card-unit">( M )</div>
+							  	</div>
+							</div>
 						</div>
-						<div class="roadmap-item type-card">
-							<img class="item-card" src="img/card_2.svg">
+						<div class="card-item type-card">							
+							<div class="card card-content">
+							  	<div class="card-line1">
+							  		<span class="card-dot" style="background-color: #F9AA4B;"></span>
+							  		<div class="card-percent"><img src="img/arrow-up.svg">2.11%</div>
+							  	</div>
+							  	<div class="card-line2">CARBON OFFSET</div>
+							  	<div class="card-line3">
+							  		<div class="card-amount">-</div>
+							  		<div class="card-unit">( KG )</div>
+							  	</div>
+							</div>
 						</div>
-						<div class="roadmap-item type-card">
-							<img class="item-card" src="img/card_3.svg">
+						<div class="card-item type-card">							
+							<div class="card card-content">
+							  	<div class="card-line1">
+							  		<span class="card-dot" style="background-color: #7F6EE9;"></span>
+							  		<div class="card-percent"><img src="img/arrow-up.svg">0.32%</div>
+							  	</div>
+							  	<div class="card-line2">CALORIES BURNED</div>
+							  	<div class="card-line3">
+							  		<div class="card-amount">9,345,666,831.01</div>
+							  		<div class="card-unit">( KCAL )</div>
+							  	</div>
+							</div>
 						</div>
-						<div class="roadmap-item type-card">
-							<img class="item-card" src="img/card_4.svg">
+						<div class="card-item type-card">							
+							<div class="card card-content">
+							  	<div class="card-line1">
+							  		<span class="card-dot" style="background-color: #1BA27A;"></span>
+							  		<div class="card-percent"><img src="img/arrow-up.svg">1.34%</div>
+							  	</div>
+							  	<div class="card-line2">TELEGRAM MEMBERS</div>
+							  	<div class="card-line3">
+							  		<div class="card-amount">128,213</div>
+							  		<div class="card-unit"></div>
+							  	</div>
+							</div>
 						</div>
-						<div class="roadmap-item type-card">
-							<img class="item-card" src="img/card_5.svg">
+						<div class="card-item type-card">							
+							<div class="card card-content">
+							  	<div class="card-line1">
+							  		<span class="card-dot" style="background-color: #F3BA2F;"></span>
+							  		<div class="card-percent"><img src="img/arrow-up.svg">2.11%</div>
+							  	</div>
+							  	<div class="card-line2">TWITTER FOLLOWERS</div>
+							  	<div class="card-line3">
+							  		<div class="card-amount">128,213</div>
+							  		<div class="card-unit"></div>
+							  	</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="inner card-container-mb use-custom-cursor">
+					<div class="slider">
+						<div class="card-item type-card">							
+							<div class="card card-content">
+							  	<div class="card-line1">
+							  		<span class="card-dot" style="background-color: #F9AA4B;"></span>
+							  		<div class="card-percent"><img src="img/arrow-up.svg">0.67%</div>
+							  	</div>
+							  	<div class="card-line2">DISTANCE RUN</div>
+							  	<div class="card-line3">
+							  		<div class="card-amount">4,345,666,831.01</div>
+							  		<div class="card-unit">( M )</div>
+							  	</div>
+							</div>
+							<div class="card card-content">
+							  	<div class="card-line1">
+							  		<span class="card-dot" style="background-color: #F9AA4B;"></span>
+							  		<div class="card-percent"><img src="img/arrow-up.svg">2.11%</div>
+							  	</div>
+							  	<div class="card-line2">CARBON OFFSET</div>
+							  	<div class="card-line3">
+							  		<div class="card-amount">-</div>
+							  		<div class="card-unit">( KG )</div>
+							  	</div>
+							</div>
+						</div>
+						<div class="card-item type-card">							
+							<div class="card card-content">
+							  	<div class="card-line1">
+							  		<span class="card-dot" style="background-color: #7F6EE9;"></span>
+							  		<div class="card-percent"><img src="img/arrow-up.svg">0.32%</div>
+							  	</div>
+							  	<div class="card-line2">CALORIES BURNED</div>
+							  	<div class="card-line3">
+							  		<div class="card-amount">9,345,666,831.01</div>
+							  		<div class="card-unit">( KCAL )</div>
+							  	</div>
+							</div>
+							<div class="card card-content">
+							  	<div class="card-line1">
+							  		<span class="card-dot" style="background-color: #1BA27A;"></span>
+							  		<div class="card-percent"><img src="img/arrow-up.svg">1.34%</div>
+							  	</div>
+							  	<div class="card-line2">TELEGRAM MEMBERS</div>
+							  	<div class="card-line3">
+							  		<div class="card-amount">128,213</div>
+							  		<div class="card-unit"></div>
+							  	</div>
+							</div>
+						</div>
+						<div class="card-item type-card">							
+							<div class="card card-content">
+							  	<div class="card-line1">
+							  		<span class="card-dot" style="background-color: #F3BA2F;"></span>
+							  		<div class="card-percent"><img src="img/arrow-up.svg">2.11%</div>
+							  	</div>
+							  	<div class="card-line2">TWITTER FOLLOWERS</div>
+							  	<div class="card-line3">
+							  		<div class="card-amount">128,213</div>
+							  		<div class="card-unit"></div>
+							  	</div>
+							</div>							
+							<div class="card card-content">
+							  	<div class="card-line1">
+							  		<span class="card-dot" style="background-color: #F9AA4B;"></span>
+							  		<div class="card-percent"><img src="img/arrow-up.svg">0.67%</div>
+							  	</div>
+							  	<div class="card-line2">DISTANCE RUN</div>
+							  	<div class="card-line3">
+							  		<div class="card-amount">4,345,666,831.01</div>
+							  		<div class="card-unit">( M )</div>
+							  	</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -614,7 +625,7 @@
 		<section data-scroll data-scroll-repeat data-scroll-offset="50%" class="pd-top road-map" id="roadmap">
 			<div class="container">
 				<div class="headline">
-					<span>ROADMAP</span>
+					<!--span>ROADMAP</span-->
 					<h1 class="heading"><img src="img/roadmap-title.png"></h1>
 				</div>
 			</div>
@@ -693,13 +704,90 @@
 						</div>
 					</div>
 				</div>
+				<div class="roadmap-mb">
+					<div class="roadmap-mb-line">						
+						<span class="roadmap-mb-dot dot-start"></span>
+						<span class="roadmap-mb-dot dot-end"></span>
+					</div>
+					<!--span class="roadmap-mb-line"></span-->
+					<div class="roadmap-mb-item">
+						<img src="img/roadmap-phase-1.svg">
+						<h3 class="roadmap-mb-title">MAY 2022</h3>
+						<div class="roadmap-mb-content">
+							IDO<br />
+							Launching mode: <br />
+							<ul>
+								<li>Workout</li>
+								<li>Leaderboard</li>									
+							</ul>
+						</div>
+					</div>
+					<div class="roadmap-mb-item">
+						<img src="img/roadmap-phase-2.svg">
+						<h3 class="roadmap-mb-title">JUNE 2022</h3>
+						<div class="roadmap-mb-content">
+							<br />
+							Launching mode: <br />
+							<ul>
+								<li>Mara Runnow</li>							
+							</ul>
+						</div>
+					</div>
+					<div class="roadmap-mb-item">
+						<img src="img/roadmap-phase-3.svg">
+						<h3 class="roadmap-mb-title">JULY 2022</h3>
+						<div class="roadmap-mb-content">
+							<br />
+							Launching mode: <br />
+							<ul>
+								<li>Tour de Runnow<br>(cycling) </li>
+								<li>Chalenge 1vs1, team<br>vs team (running)</li>									
+							</ul>
+						</div>
+					</div>
+					<div class="roadmap-mb-item">
+						<img src="img/roadmap-phase-4.svg">
+						<h3 class="roadmap-mb-title">AUGUST 2022</h3>
+						<div class="roadmap-mb-content">
+							<br />
+							Launching mode: <br />
+							<ul>
+								<li>Swim de Runnow</li>
+								<li>Chalenge 1vs1, team<br>vs team (cycling)</li>									
+							</ul>
+						</div>
+					</div>
+					<div class="roadmap-mb-item">
+						<img src="img/roadmap-phase-5.svg">
+						<h3 class="roadmap-mb-title">OCTOBER 2022</h3>
+						<div class="roadmap-mb-content">
+							<br />
+							Launching mode: <br />
+							<ul>
+								<li>Runnow man</li>
+								<li>Catchup Runnow go</li>									
+							</ul>
+						</div>
+					</div>
+					<div class="roadmap-mb-item">
+						<img src="img/roadmap-phase-6.svg">
+						<h3 class="roadmap-mb-title">Q4 2022</h3>
+						<div class="roadmap-mb-content">
+							<br />
+							<br />
+							<ul style="list-style: none;">
+								<li>Connect to GEMUNI<br />Metaverse</li>
+							</ul>
+						</div>
+					</div>					
+				</div>
 			</div>
 		</section>
 		<section data-scroll data-scroll-repeat data-scroll-offset="50%"
 			class="pd-sc tokenomics-section gradient-background" id="tokenonmics">
 			<div class=" container">
 				<div class="headline">
-					<span>TOKEN DISTRIBUTION</span>
+					<!--span>TOKEN DISTRIBUTION</span-->
 					<h1 class="heading"><img src="img/tokenomic-title.png"></h1>
 				</div>
 				<div class="chart">
@@ -710,7 +798,7 @@
 		<section data-scroll data-scroll-repeat data-scroll-offset="50%" class="pd-top team-section" id="team">
 			<div class="container">
 				<div class="headline">
-					<span>TEAM</span>
+					<!--span>TEAM</span-->
 					<h1 class="main-heading --center gradient-line two-line-gradient"><img src="img/our-experts.png"></h1>
 					<h1 class="sub-heading"><img src="img/team-kbg.svg"></h1>
 				</div>
@@ -983,6 +1071,13 @@
 								<button type="submit"></button>
 							</form>
 						</div>
+						<ul class="social-links">
+							<li><a href=""><img src="img/youtube-icon.svg"></a></li>
+							<li><a href=""><img src="img/facebook-icon.svg"></a></li>
+							<li><a href=""><img src="img/telegram-icon.svg"></a></li>
+							<li><a href=""><img src="img/twitter-icon.svg"></a></li>
+							<li><a href=""><img src="img/discord-icon.svg"></a></li>
+						</ul>
 					</div>
 				</div>
 				<p class="copy-right">© 2022 Run Now Inc. All rights reserved.</p>

@@ -1,3 +1,16 @@
+function ShowItems($target, $itemID){
+	$('#nft-items-menu').children().removeClass('active');
+	$($target).addClass('active');
+
+	$('#nft-items-container').find('.slider').removeClass('active-slider');
+	$('#' + $itemID).addClass('active-slider');
+	$('#' + $itemID).css('opacity', '1');
+
+	$('#nft-items-container').find('.flickity-enabled').hide();
+	$('#' + $itemID).show();
+	$('#' + $itemID).insertAfter($('#nft-items-menu').parent());
+}
+
 function InitNFTItems(){
 	$('#nft-items-menu').find('.active').click();
 	//$('#nft-items-container').find('.flickity-enabled').hide();
@@ -9,6 +22,22 @@ function ShowAllNFTItems(){
 	$('#nft-items-container').find('.active-slider').css("opacity", "1");
 
 	setTimeout(InitNFTItems, 500);
+}
+
+function HideCardSliderByWindowSize(){
+	if ($(window).width() <= 991) {
+		$('.card-container').hide();
+	}
+	else{
+		$('.card-container-mb').hide();
+	}
+}
+
+function ShowAllCardSliders(){
+	$('.card-container').show();
+	$('.card-container-mb').show();
+
+	setTimeout(HideCardSliderByWindowSize, 500);
 }
 ///////////////////////// SCROLL ///////////////////////////////
 $(document).ready(function () {
@@ -82,6 +111,7 @@ $(document).ready(function () {
 
 	function reloadOnResize() {
 		ShowAllNFTItems();
+		ShowAllCardSliders();
 		let windowsize = $(window).width(),
 			divice = localStorage.getItem("device");
 		if (windowsize <= screen.mobile && divice != "mobile") {
@@ -321,11 +351,13 @@ $(document).ready(function () {
 	// ROAD MAP SLIDER
 	function roadmapSlider() {
 		const $carousel = $(".roadmap.inner .slider").flickity({
-			cellAlign: "left",
-			contain: "true",
-			freeScroll: true,
+			cellAlign: "center",
+			contain: true,
+			watchCSS: true,
+			freeScroll: false,
 			pageDots: false,
-			prevNextButtons: true,
+			groupCells: 2,
+			prevNextButtons: true
 		});
 		$(".roadmap").on("mouseenter", function () {
 			cursor.addClass("--show");
@@ -355,6 +387,95 @@ $(document).ready(function () {
 		});
 	}
 
+	function CardSlider() {
+		const $carousel = $(".card-container.inner .slider").flickity({
+			cellAlign: "center",
+			contain: true,
+			wrapAround: true,
+			freeScroll: false,
+			pageDots: false,
+			groupCells: 1,
+			prevNextButtons: false,
+			on: {
+			    ready: function() {			    	
+					if ($(window).width() <= 991) {
+						$('.card-container').hide();
+					}
+				}
+		    }
+		});
+		$(".card-container").on("mouseenter", function () {
+			cursor.addClass("--show");
+		});
+		$(".card-container").on("mouseleave", function () {
+			cursor.removeClass("--show");
+		});
+
+		$carousel.on("dragStart.flickity", function () {
+			gsap.to(cursor, { scale: 0.8, duration: 0.2 });
+		});
+		$carousel.on("dragEnd.flickity", function () {
+			gsap.to(cursor, { scale: 1, duration: 0.2 });
+		});
+		$carousel.on("dragMove.flickity", function (event, pointer, moveVector) {
+			const { pageX, pageY } = pointer;
+
+			cursorPosition = { ...{ x: pageX, y: pageY } };
+			gsap.to({}, 0.0, {
+				onUpdate: function () {
+					gsap.set(cursor, {
+						x: cursorPosition.x,
+						y: cursorPosition.y,
+					});
+				},
+			});
+		});
+	}
+	
+	function CardSliderMB() {
+		const $carousel = $(".card-container-mb.inner .slider").flickity({
+			cellAlign: "center",
+			contain: true,
+			wrapAround: true,
+			freeScroll: false,
+			pageDots: false,
+			groupCells: 1,
+			prevNextButtons: false,
+			on: {
+			    ready: function() {			    	
+					if ($(window).width() > 991) {
+						$('.card-container-mb').hide();
+					}
+				}
+		    }
+		});
+		$(".card-container-mb").on("mouseenter", function () {
+			cursor.addClass("--show");
+		});
+		$(".card-container-mb").on("mouseleave", function () {
+			cursor.removeClass("--show");
+		});
+
+		$carousel.on("dragStart.flickity", function () {
+			gsap.to(cursor, { scale: 0.8, duration: 0.2 });
+		});
+		$carousel.on("dragEnd.flickity", function () {
+			gsap.to(cursor, { scale: 1, duration: 0.2 });
+		});
+		$carousel.on("dragMove.flickity", function (event, pointer, moveVector) {
+			const { pageX, pageY } = pointer;
+
+			cursorPosition = { ...{ x: pageX, y: pageY } };
+			gsap.to({}, 0.0, {
+				onUpdate: function () {
+					gsap.set(cursor, {
+						x: cursorPosition.x,
+						y: cursorPosition.y,
+					});
+				},
+			});
+		});
+	}
 	//MEMBER SLIDER (ON SMALL DEVICE)
 	function memberSlideHandle() {
 		let teamSlider = null;
@@ -450,6 +571,8 @@ $(document).ready(function () {
 				initCyberSpaceSlider();
 				hamburgerClick();
 				cyberLabVideoHandle();
+				CardSlider();
+				CardSliderMB();
 				roadmapSlider();
 				memberSlideHandle();
 				mobileNavigatorClick();
@@ -467,16 +590,3 @@ $(document).ready(function () {
 	}
 	init();
 });
-
-function ShowItems($target, $itemID){
-	$('#nft-items-menu').children().removeClass('active');
-	$($target).addClass('active');
-
-	$('#nft-items-container').find('.slider').removeClass('active-slider');
-	$('#' + $itemID).addClass('active-slider');
-	$('#' + $itemID).css('opacity', '1');
-
-	$('#nft-items-container').find('.flickity-enabled').hide();
-	$('#' + $itemID).show();
-	$('#' + $itemID).insertAfter($('#nft-items-menu').parent());
-}
