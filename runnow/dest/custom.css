@@ -1,3 +1,7 @@
+:root {
+	--font-size-ratio: 1;
+}
+
 .menu-link{
 	font-family: 'Inter', sans-serif;
 	font-style: bold;
@@ -88,9 +92,8 @@ body .mainwrapper{
 	font-family: 'Inter', sans-serif;
 	font-style: normal;
 	font-weight: 400;
-	font-size: 18px;
-	/*font-size: 1.1250em;*/
-	line-height: 32px;
+	font-size: calc(var(--font-size-ratio) * 18px);
+	line-height: calc(var(--font-size-ratio) * 32px);
 	text-align: left;
 	/* or 178% */
 
@@ -102,7 +105,7 @@ body .mainwrapper{
 	font-family: 'Inter', sans-serif;
 	font-style: normal;
 	font-weight: 700;
-	font-size: 24px;
+	font-size: calc(var(--font-size-ratio) * 24px);
 	line-height: 158.7%;
 	/* identical to box height, or 38px */
 
@@ -137,8 +140,8 @@ body .mainwrapper{
 	font-family: 'Inter', sans-serif;
 	font-style: normal;
 	font-weight: 600;
-	font-size: 16px;
-	line-height: 24px;
+	font-size: calc(var(--font-size-ratio) * 16px);
+	line-height: calc(var(--font-size-ratio) * 24px);
 	/* identical to box height, or 150% */
 
 	color: #FFFFFF;
@@ -172,8 +175,8 @@ body .mainwrapper{
 	font-family: 'Inter', sans-serif;
 	font-style: normal;
 	font-weight: 600;
-	font-size: 24px;
-	line-height: 28px;
+	font-size: calc(var(--font-size-ratio) * 24px);
+	line-height: calc(var(--font-size-ratio) * 28px);
 	background: linear-gradient(270.17deg, #00EFA9 135.3%, #3F56F0 1258.28%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -181,6 +184,9 @@ body .mainwrapper{
 	text-fill-color: transparent;
 }
 
+.main-heading img, .heading img {	
+    max-width: calc(var(--font-size-ratio) * 100%);
+}
 
 .home .about-section .section-content .headline .heading img {
     margin: auto;
@@ -221,7 +227,7 @@ body .mainwrapper{
 	font-family: 'Inter', sans-serif;
 	font-style: normal;
 	font-weight: 700;
-	font-size: 40px;
+	font-size: calc(var(--font-size-ratio) * 30px);
 	line-height: 110%;
 	/* or 44px */
 	text-align: left;
@@ -230,7 +236,7 @@ body .mainwrapper{
 
 	color: #FFFFFF;
 
-	padding-top: 60px;
+	padding-top: calc(var(--font-size-ratio) * 60px);
 }
 
 .home .about-section .section-content .content{
@@ -244,8 +250,8 @@ body .mainwrapper{
 	font-family: 'Inter', sans-serif;
 	font-style: normal;
 	font-weight: 400;
-	font-size: 16px;
-	line-height: 24px;
+	font-size: calc(var(--font-size-ratio) * 16px);
+	line-height: 150%;
 	/* or 150% */
 
 
@@ -278,7 +284,7 @@ body .mainwrapper{
 	font-family: 'Inter', sans-serif;
 	font-style: normal;
 	font-weight: 700;
-	font-size: 25px;
+	font-size: calc(var(--font-size-ratio) * 25px);
 	line-height: 150%;
 	/* identical to box height, or 30px */
 
@@ -294,6 +300,13 @@ body .mainwrapper{
 	left: 0;	
 	width: 100%;
 	height: 100%;
+}
+
+.home .about-section .about-slider .container .more-item-button {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-40%);
 }
 
 .home .about-section .about-slider .container .v-menu {
@@ -417,6 +430,30 @@ body .mainwrapper{
     flex-direction: column;
 }
 
+.flickity-prev-next-button {
+	background: none;
+}
+
+.flickity-button {
+	color: #fff;
+}
+
+.flickity-button:hover{
+	background: none;
+}
+
+.flickity-prev-next-button.previous {
+	left: -20px;
+}
+
+.flickity-prev-next-button.next {
+	right: -20px;
+}
+
+.flickity-prev-next-button .flickity-button-icon {
+	width: 100%;
+	height: 100%;
+}
 
 .home .roadmap .slider:after {	
 	content: 'flickity';
@@ -538,7 +575,7 @@ body .mainwrapper{
     opacity: 0.5;
     /* transform: rotate(90deg); */
     position: absolute;
-    margin-left: 29px;
+    margin-left: 19px;
 }
 
 .home .road-map .roadmap-mb-item{
@@ -549,14 +586,14 @@ body .mainwrapper{
 }
 
 .home .road-map .roadmap-mb-title {
-    width: 30%;
+    width: 35%;
 	padding: 20px;
     display: block;
 
 	font-family: 'Inter', sans-serif;
 	font-style: normal;   
 	font-weight: 900;
-    font-size: 30px;
+    font-size: calc(var(--font-size-ratio) * 22px);
 	text-align: left;
 	letter-spacing: 0.085em;
 
@@ -574,7 +611,7 @@ body .mainwrapper{
 	font-family: 'Poppins', sans-serif;
 	font-style: bold;
 	font-weight: 700;
-	font-size: 24px;
+	font-size: calc(var(--font-size-ratio) * 18px);
 	line-height: 150%;
 	color: #FFFFFF;
 	letter-spacing: 1px
@@ -582,7 +619,7 @@ body .mainwrapper{
 }
 
 .home .road-map .roadmap-mb-item img{
-    width: 60px;
+    width: 40px;
 }
 
 .home .road-map .roadmap-mb-content ul{
@@ -594,7 +631,7 @@ body .mainwrapper{
 	font-family: 'Poppins', sans-serif;
 	font-style: italic;
 	font-weight: 300;
-	font-size: 15px;
+	font-size: calc(var(--font-size-ratio) * 15px);
 	line-height: 150%;
 	color: #FFFFFF;
 	letter-spacing: 1px
@@ -642,17 +679,19 @@ body .mainwrapper{
     margin: auto;
 }
 
-.home .team-section .headline .sub-heading{
+.home .team-section .headline .sub-heading {
+    margin-top: 50px;
 	margin-bottom: 40px;
 }
 
 .home .team-section .headline .sub-heading img {
 	margin: auto;
+	max-width: calc(var(--font-size-ratio) * 100%);
 }
 
 .home .team-section .team__list {
 	column-gap: 0;
-	row-gap: 21px;
+	row-gap: 0;
 }
 
 .home .team-section .team__list .item{
@@ -663,8 +702,8 @@ body .mainwrapper{
 	font-family: 'Inter', sans-serif;
 	font-style: normal;
 	font-weight: 500;
-	font-size: 21px;
-	line-height: 32px;
+	font-size: calc(var(--font-size-ratio) * 21px);
+	line-height: 150%;
 	text-align: left;
 	/* identical to box height */
 
@@ -680,8 +719,8 @@ body .mainwrapper{
 	font-family: 'Inter', sans-serif;
 	font-style: normal;
 	font-weight: 300;
-	font-size: 16px;
-	line-height: 24px;
+	font-size: calc(var(--font-size-ratio) * 16px);
+	line-height: 150%;
 	text-align: left;
 	/* identical to box height */
 
@@ -720,6 +759,7 @@ body .mainwrapper{
 
 .team-members .member__img img{
     object-fit: cover;
+    max-width: calc(var(--font-size-ratio) * 100%);
 }
 
 .home .advisors-section .team-members .member{
@@ -744,19 +784,17 @@ body .mainwrapper{
 	margin-top: 0;
 }
 
-
 .team-members .member__info2 {
     margin: 27px 23px;
     flex: 1;
     text-align: right;
-
 }
 
 .team-members .member__info2 .info-name{
 	font-family: 'Inter', sans-serif;
 	font-style: normal;
 	font-weight: 700;
-	font-size: 24px;
+	font-size: calc(var(--font-size-ratio) * 24px);
 	line-height: 143.7%;
 	/* or 34px */
 
@@ -772,7 +810,7 @@ body .mainwrapper{
 	font-family: 'Inter', sans-serif;
 	font-style: normal;
 	font-weight: 400;
-	font-size: 16px;
+	font-size: calc(var(--font-size-ratio) * 16px);
 	line-height: 143.7%;
 	/* identical to box height, or 23px */
 
@@ -788,7 +826,7 @@ body .mainwrapper{
 	font-family: 'Inter', sans-serif;
 	font-style: normal;
 	font-weight: 300;
-	font-size: 14px;
+	font-size: calc(var(--font-size-ratio) * 14px);
 	line-height: 158.7%;
 	/* or 22px */
 
@@ -801,9 +839,6 @@ body .mainwrapper{
 	padding-top: 11px;
 	width: 90%;
 }
-
-
-
 
 .team-members .member__info2 .text-content{
 
@@ -819,6 +854,7 @@ body .mainwrapper{
 
 .home .partners-section .partners-list .partner img {
 	float: left;
+	max-width: calc(var(--font-size-ratio) * 100%);
 }
 
 .home .partners-section .partners-list.--coming-soon .partner p {
@@ -828,7 +864,7 @@ body .mainwrapper{
 	font-family: 'Inter', sans-serif;
 	font-style: normal;
 	font-weight: 700;
-	font-size: 24px;
+	font-size: calc(var(--font-size-ratio) * 20px);
 	line-height: 143.7%;
 	/* or 34px */
 
@@ -1074,6 +1110,7 @@ header .header .menu-item .sub-menu {
 	.home .advisors-section .team-members{
 		--columns-count: 1;
 	}
+
 	.home .advisors-section .team-members .member:nth-child(1),
 	.home .advisors-section .team-members .member:nth-child(2),
 	.home .advisors-section .team-members .member:nth-child(3),
@@ -1085,9 +1122,10 @@ header .header .menu-item .sub-menu {
 		margin: auto;
 	}
 
+	/*
 	.home .hero-section{
 		margin-top: var(--height-header);
-	}
+	}*/
 
 	header .logo-wrap .logo{
 		margin-top: 0;
@@ -1131,9 +1169,9 @@ header .header .menu-item .sub-menu {
 		max-width: 100%;
 	}	
 
-	.home .about-section .section-content .headline .heading img {
+	/*.home .about-section .section-content .headline .heading img {
 		margin-top: 20px; 
-	}
+	}*/
 
 	.home .about-section .section-content .headline .heading img.img-mb {
 		display: block;	
@@ -1154,6 +1192,14 @@ header .header .menu-item .sub-menu {
 		top: 110px;
 	}
 
+	.home .about-section .about-slider .container .more-item-button {
+    	bottom: calc(5% - 110px);
+    	transform: translateX(-28%);
+	}
+
+	.home .about-section .about-slider .container .more-item-button img{
+		max-width: 60%;
+	}
 
 	.home .asset-card .card-item {
 		--card-width: calc(var(--container-width));		
@@ -1216,11 +1262,11 @@ header .header .menu-item .sub-menu {
 	.footer .logo-col .logo img {		
     	max-width: 50vw;
     	width: 50vw;
-    	margin-bottom: 60px;
 	}
 
 	.footer .inner {
 		display: flow-root;
+		padding: 0 20px;
 	}
 
 	.footer .site-map-wrapper {
@@ -1228,12 +1274,12 @@ header .header .menu-item .sub-menu {
 	}
 
 	.footer-title {
-		font-size: 34px;
+		font-size: 25px;
 	}
 
 	.footer .site-map__item a, .footer .contact-row a, .footer .contact-form-wrapper input {
-	   	font-size: 25px;
-    	line-height: 55px;
+		font-size: 20px;
+    	line-height: 35px;
 	}
 
 	.footer .footer-title {
@@ -1242,9 +1288,50 @@ header .header .menu-item .sub-menu {
     }
 
     .footer .copy-right {
-    	font-size: 25px;
+    	font-size: 18px;
     	text-align: center;
     }
+
+    :root{
+    	--font-size-ratio: 0.85;
+    }
+
+    .home .about-section .section-content .content .sub-content .intro .title {
+    	padding: 10px 0;
+    }
+
+    .home .about-section .section-content .headline .heading.gradient-line {
+		--width: 80%;
+	    --right: 10%;
+    }
+
+    .home .about-section .about-slider .container .v-menu img{
+    	max-width: calc(var(--font-size-ratio) * 100%);
+    }
+
+    .home .team-section .headline .sub-heading {
+	    margin: 10px 0 30px 0;
+    }
+
+    .home .road-map {
+    	padding-top: 0;
+    }
+
+    .home .team-section .team__list .item__info .pos {
+    	padding-bottom: 60px;
+    }
+
+	.gradient-line.two-line-gradient {
+		--gradient-gap: 5px;
+	}
+
+	.home .advisors-section .main-heading.gradient-line {
+		margin-bottom: 0;
+	}
+
+	.team-members .member__info2 {
+		margin: 0 10px;
+	}
 }
 
 @media screen and (max-width: 767px){
@@ -1280,7 +1367,7 @@ header .header .menu-item .sub-menu {
 	}
 }
 
-@media screen and (max-width: 399px){
+@media screen and (max-width: 576px){
 	.card-dot {
 		width: 43px;
 		height: 43px;
