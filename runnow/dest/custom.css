@@ -22,7 +22,13 @@ body{
 }
 
 header{
-	background: linear-gradient(360deg, rgba(0, 0, 0, 0) 0%, #6542C9 100%);
+	/*background: linear-gradient(360deg, rgba(0, 0, 0, 0) 0%, #6542C9 100%);*/
+	border-bottom: 1px solid rgba(255,255,255,0.5);
+    box-sizing: border-box;
+    background: rgba(101,66,201,0.08);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    --height-header: 96px;
 }
 
 .McButton {
@@ -86,6 +92,20 @@ body .mainwrapper{
 	color: #C4C4C4;
 	max-width: 50%;
 	margin-bottom: 60px;	
+}
+
+.home .hero-section__description.--hide{
+	opacity:0;
+	transform:translateY(100px);
+	-webkit-transform:translateY(100px);
+	-moz-transform:translateY(100px);
+	-ms-transform:translateY(100px);
+	-o-transform:translateY(100px);
+	transition:.4s;
+	-webkit-transition:.4s;
+	-moz-transition:.4s;
+	-ms-transition:.4s;
+	-o-transition:.4s
 }
 
 .home .hero-section__content .content {
@@ -931,6 +951,7 @@ body .mainwrapper{
 	color: #FFFFFF;
 
 }
+
 header .header .menu .sub-menu .menu-item .menu-link {
     font-family: 'Inter', sans-serif;
     font-style: normal;
@@ -941,6 +962,7 @@ header .header .menu .sub-menu .menu-item .menu-link {
 
 header .header .menu-item .sub-menu {
     margin-left: -25px;
+    bottom: -15px;
 }
 
 
@@ -1331,6 +1353,10 @@ header .header .menu-item .sub-menu {
 
 	.team-members .member__info2 {
 		margin: 0 10px;
+	}
+
+	.home .hero-section video {
+		height: auto;
 	}
 }
 

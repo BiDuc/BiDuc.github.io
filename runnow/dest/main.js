@@ -210,6 +210,7 @@ $(document).ready(function () {
 		const buttonPlay = $(".hero-section .button-play-wrap");
 		const targetVideo = $(".hero-section video");
 		const poster = $(".hero-section .poster-video");
+		const description = $(".hero-section__description");
 		buttonPlay.on("click", function () {
 			if (buttonPlay.hasClass("--playing")) {
 				targetVideo.get(0).pause();
@@ -220,6 +221,7 @@ $(document).ready(function () {
 				buttonPlay.addClass("--playing");
 				buttonPlay.removeClass("--pausing");
 				targetVideo.get(0).play();
+				description.addClass("--hide");
 			}
 		});
 		targetVideo.on("click", function () {
@@ -232,16 +234,19 @@ $(document).ready(function () {
 				buttonPlay.addClass("--playing");
 				buttonPlay.removeClass("--pausing");
 				targetVideo.get(0).play();
+				description.addClass("--hide");
 			}
 		});
 		targetVideo.on("pause", function () {
 			buttonPlay.addClass("--pausing");
 			buttonPlay.removeClass("--playing");
+			description.removeClass("--hide");
 		});
 		targetVideo.on("ended", function () {
 			this.src = this.src;
 			buttonPlay.removeClass("--pausing --playing");
 			poster.removeClass("--hide");
+			description.removeClass("--hide");
 		});
 	}
 
