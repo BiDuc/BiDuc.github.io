@@ -606,7 +606,8 @@ body .mainwrapper{
 	width: 100%;
 	margin: 15px 0;
     display: inline-flex;
-    align-items: center;    
+    align-items: center;
+    padding-left: 25px;
 }
 
 .home .road-map .roadmap-mb-title {
@@ -630,7 +631,7 @@ body .mainwrapper{
 
 .home .road-map .roadmap-mb-content {
 	border: none;
-	text-align: right;
+	text-align: left;
 
 	font-family: 'Poppins', sans-serif;
 	font-style: bold;
@@ -640,6 +641,7 @@ body .mainwrapper{
 	color: #FFFFFF;
 	letter-spacing: 1px;
 
+	padding-left: 20px;
 }
 
 .home .road-map .roadmap-mb-item img{
@@ -648,7 +650,7 @@ body .mainwrapper{
 
 .home .road-map .roadmap-mb-content ul{
 	text-align: left;
-	padding-left: 40px;
+	padding-left: 16px;
 	list-style: square;
 
 
